@@ -1,0 +1,22 @@
+.Controls{
+    width: 350px;
+    height: auto;
+    text-align: center;
+}
+.Controls img{
+    vertical-align: middle;
+    margin: 10px;
+    cursor: pointer;
+}
+.Controls .Next{
+    transform: rotate(180deg);
+}
+
+.Controls .Loading{
+    animation: loading infinite 1s linear;
+    -webkit-animation:loading infinite 1s linear;
+}
+@keyframes loading{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

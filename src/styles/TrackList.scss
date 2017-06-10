@@ -1,0 +1,105 @@
+.TrackListShow {
+	width: 100%;
+	height: 100%;
+	animation: fadeInDown forwards 1s linear;
+	-webkit-animation:fadeInDown forwards 1s linear;
+}
+
+.TrackListHidden{
+    width: 100%;
+    height: 100%;
+    animation: fadeOutUp forwards 1s linear;
+    -webkit-animation:fadeOutUp forwards 1s linear;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; 
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+ol {
+	padding: 0px;
+	margin: 0px;
+	list-style: decimal-leading-zero inside;
+	color: #ccc;
+	width: 100%;
+	/*border-top: 1px solid #ccc;*/
+	font-size: 12px;
+}
+
+ol li {
+	position: relative;
+	margin: 0px;
+	padding: 9px 2px 10px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+
+ol li span {
+	display: block;
+	padding: 0px 0px 0px 10px;
+}
+
+li.playing {
+	color: #aaa;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+}
+
+li.playing:before {
+	content: '♬';
+	width: 14px;
+	height: 14px;
+	padding: 3px;
+	line-height: 14px;
+	margin: 0px;
+	position: absolute;
+	left: -24px;
+	top: 9px;
+	color: #000;
+	font-size: 13px;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.current{
+    color: #000;
+    transition: all .5s;
+    font-style: italic;
+}
